@@ -1,4 +1,3 @@
-IMAGE_FILE = 'ciao.jpg'
 
 import cv2
 import numpy as np
@@ -50,7 +49,6 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH,1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT,1080)
 while cap.isOpened():
     ret, frame = cap.read()
-    cv2.imwrite('ciao.jpg', frame)
     # STEP 2: Create an ObjectDetector object.
     base_options = python.BaseOptions(model_asset_path='modelHumans2.tflite')
     options = vision.ObjectDetectorOptions(base_options=base_options,
